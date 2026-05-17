@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Create Profiles</string>
+   <string>Создание профилей</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -23,14 +23,14 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Profile / Face</string>
+         <string>Профиль / Грань</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="pb_selectprofile">
         <property name="text">
-         <string>Select Profile</string>
+         <string>Выбрать профиль</string>
         </property>
        </widget>
       </item>
@@ -131,7 +131,7 @@
         <item>
          <widget class="QRadioButton" name="rb_profiles_in_place">
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create the profile at the same level as the source (Sketch or Parametric Line)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Создать профиль на том же уровне, что и источник (эскиз или параметрическая линия)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
            <string>In place</string>
@@ -144,10 +144,10 @@
         <item>
          <widget class="QRadioButton" name="rb_profiles_in_part">
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create profiles in a newly created Part&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Создавать профили в новом контейнере Part&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
-           <string>Create a Part</string>
+           <string>Создать Part</string>
           </property>
          </widget>
         </item>
@@ -157,10 +157,10 @@
            <bool>false</bool>
           </property>
           <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create profiles in a newly created Part&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Создавать профили в новом контейнере Part&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="text">
-           <string>Create a Group</string>
+           <string>Создать группу</string>
           </property>
          </widget>
         </item>

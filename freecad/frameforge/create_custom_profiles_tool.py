@@ -47,7 +47,7 @@ class CreateCustomProfileTaskPanel:
 
         else:
             diag = QtGui.QMessageBox(
-                QtGui.QMessageBox.Warning, "Create Profile", "Select Edges or set Length to create a profile"
+                QtGui.QMessageBox.Warning, "Создание профиля", "Выберите рёбра или задайте длину для создания профиля"
             )
             diag.setWindowModality(QtCore.Qt.ApplicationModal)
             diag.exec_()
@@ -174,7 +174,7 @@ class CreateCustomProfileTaskPanel:
 
             self.custom_profile = profile_sel.Object
 
-            self.form.pb_selectprofile.setText(f"Profile {self.custom_profile.Label}")
+            self.form.pb_selectprofile.setText(f"Профиль {self.custom_profile.Label}")
 
         else:
             self.custom_profile = None
@@ -202,7 +202,7 @@ class CreateCustomProfileTaskPanel:
 
         else:
             self.form.sb_length.setEnabled(True)
-            obj_name = "Not Attached / Define length"
+            obj_name = "Не привязано / Задайте длину"
 
         self.form.label_attach.setText(obj_name)
 

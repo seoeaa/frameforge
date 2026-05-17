@@ -375,7 +375,7 @@ class CreateProfileTaskPanel(BaseProfileTaskPanel):
             App.Console.PrintMessage(translate("frameforge", "Not Accepting CreateProfile\nSelect Edges or set Length"))
 
             diag = QtGui.QMessageBox(
-                QtGui.QMessageBox.Warning, "Create Profile", "Select Edges or set Length to create a profile"
+                QtGui.QMessageBox.Warning, "Создание профиля", "Выберите рёбра или задайте длину для создания профиля"
             )
             diag.setWindowModality(QtCore.Qt.ApplicationModal)
             diag.exec_()
@@ -559,7 +559,7 @@ class CreateProfileTaskPanel(BaseProfileTaskPanel):
 
         else:
             self.form_proxy.sb_length.setEnabled(True)
-            obj_name = "Not Attached / Define length"
+            obj_name = "Не привязано / Задайте длину"
 
         self.form_proxy.label_attach.setText(obj_name)
 
