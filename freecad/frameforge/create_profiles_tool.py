@@ -198,7 +198,10 @@ class BaseProfileTaskPanel(ABC):
         self.update_image()
 
         self.form_proxy.label_norm.setText(self.profiles[material][family]["norm"])
-        self.form_proxy.label_unit.setText(self.profiles[material][family]["unit"])
+        unit = self.profiles[material][family]["unit"]
+        if unit == "Metric Units":
+            unit = "Метрические единицы (мм)"
+        self.form_proxy.label_unit.setText(unit)
 
         self.form_proxy.combo_size.clear()
         self.form_proxy.combo_size.addItems([s for s in self.profiles[material][family]["sizes"]])
@@ -372,7 +375,7 @@ class CreateProfileTaskPanel(BaseProfileTaskPanel):
             App.Console.PrintMessage(translate("frameforge", "Not Accepting CreateProfile\nSelect Edges or set Length"))
 
             diag = QtGui.QMessageBox(
-                QtGui.QMessageBox.Warning, "Create Profile", "Select Edges or set Length to create a profile"
+                QtGui.QMessageBox.Warning, "Создание профиля", "Выберите рёбра или задайте длину для создания профиля"
             )
             diag.setWindowModality(QtCore.Qt.ApplicationModal)
             diag.exec_()
@@ -556,7 +559,7 @@ class CreateProfileTaskPanel(BaseProfileTaskPanel):
 
         else:
             self.form_proxy.sb_length.setEnabled(True)
-            obj_name = "Not Attached / Define length"
+            obj_name = "Не привязано / Задайте длину"
 
         self.form_proxy.label_attach.setText(obj_name)
 
@@ -568,8 +571,8 @@ class CreateProfilesCommand:
         return {
             "Pixmap": os.path.join(ICONPATH, "warehouse_profiles.svg"),
             "Accel": "Shift+S",  # a default shortcut (optional)
-            "MenuText": "Create Profile",
-            "ToolTip": "Create new profiles from Edges",
+            "MenuText": "Создать профиль",
+            "ToolTip": "Создать новые профили из рёбер",
         }
 
     def Activated(self):

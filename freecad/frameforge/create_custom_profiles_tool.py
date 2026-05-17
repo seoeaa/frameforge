@@ -47,7 +47,7 @@ class CreateCustomProfileTaskPanel:
 
         else:
             diag = QtGui.QMessageBox(
-                QtGui.QMessageBox.Warning, "Create Profile", "Select Edges or set Length to create a profile"
+                QtGui.QMessageBox.Warning, "Создание профиля", "Выберите рёбра или задайте длину для создания профиля"
             )
             diag.setWindowModality(QtCore.Qt.ApplicationModal)
             diag.exec_()
@@ -151,7 +151,7 @@ class CreateCustomProfileTaskPanel:
         if not self.select_profile_flag:
             self.select_profile_flag = True
             self.form.pb_selectprofile.setEnabled(False)
-            self.form.pb_selectprofile.setText("Select a Profile")
+            self.form.pb_selectprofile.setText("Выберите профиль")
 
     def addSelection(self, doc, obj, sub, other):
         if self.select_profile_flag:
@@ -174,11 +174,11 @@ class CreateCustomProfileTaskPanel:
 
             self.custom_profile = profile_sel.Object
 
-            self.form.pb_selectprofile.setText(f"Profile {self.custom_profile.Label}")
+            self.form.pb_selectprofile.setText(f"Профиль {self.custom_profile.Label}")
 
         else:
             self.custom_profile = None
-            self.form.pb_selectprofile.setText("Select Profile")
+            self.form.pb_selectprofile.setText("Выбрать профиль")
 
     def update_selection(self):
         # update internal list
@@ -202,7 +202,7 @@ class CreateCustomProfileTaskPanel:
 
         else:
             self.form.sb_length.setEnabled(True)
-            obj_name = "Not Attached / Define length"
+            obj_name = "Не привязано / Задайте длину"
 
         self.form.label_attach.setText(obj_name)
 
@@ -214,8 +214,8 @@ class CreateCustomProfilesCommand:
         return {
             "Pixmap": os.path.join(ICONPATH, "warehouse_custom_profiles.svg"),
             "Accel": "Shift+C",  # a default shortcut (optional)
-            "MenuText": "Create Custom Profile",
-            "ToolTip": "Create new custom profiles from Edges",
+            "MenuText": "Создать пользовательский профиль",
+            "ToolTip": "Создать новый пользовательский профиль из рёбер",
         }
 
     def Activated(self):

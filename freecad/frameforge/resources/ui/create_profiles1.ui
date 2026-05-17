@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Create Profiles</string>
+   <string>Создание профилей</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>

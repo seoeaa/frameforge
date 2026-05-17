@@ -40,8 +40,8 @@ class LinkCommand:
     def GetResources(self):
         return {
             "Pixmap": os.path.join(ICONPATH, "link.svg"),
-            "MenuText": "Attached Link",
-            "ToolTip": "Create a link with Attachment",
+            "MenuText": "Присоединённая ссылка",
+            "ToolTip": "Создать ссылку с привязкой",
         }
 
     def IsActive(self):

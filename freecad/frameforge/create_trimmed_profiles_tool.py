@@ -121,7 +121,7 @@ class CreateTrimmedProfileTaskPanel:
                 "{} ({})".format(self.fp.TrimmedBody.Label, self.fp.TrimmedBody.Name)
             )
         else:
-            self.form.trimmed_object_label.setText("Select...")
+            self.form.trimmed_object_label.setText("Выберите...")
 
         self.form.boundaries_list_widget.clear()
 
