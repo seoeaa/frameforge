@@ -95,8 +95,8 @@ class CreateParametricLineCommand:
     def GetResources(self):
         return {
             "Pixmap": TOOL_ICON,
-            "MenuText": "Create a Parametric Line",
-            "ToolTip": "Create a Parametric Line from two Vertex<br><br>Select two vertex then run this command",
+            "MenuText": "Создать параметрическую линию",
+            "ToolTip": "Создать параметрическую линию из двух вершин<br><br>Выберите две вершины и запустите команду",
         }
 
 

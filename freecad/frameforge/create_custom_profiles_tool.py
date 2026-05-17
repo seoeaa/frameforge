@@ -151,7 +151,7 @@ class CreateCustomProfileTaskPanel:
         if not self.select_profile_flag:
             self.select_profile_flag = True
             self.form.pb_selectprofile.setEnabled(False)
-            self.form.pb_selectprofile.setText("Select a Profile")
+            self.form.pb_selectprofile.setText("Выберите профиль")
 
     def addSelection(self, doc, obj, sub, other):
         if self.select_profile_flag:
@@ -178,7 +178,7 @@ class CreateCustomProfileTaskPanel:
 
         else:
             self.custom_profile = None
-            self.form.pb_selectprofile.setText("Select Profile")
+            self.form.pb_selectprofile.setText("Выбрать профиль")
 
     def update_selection(self):
         # update internal list
@@ -214,8 +214,8 @@ class CreateCustomProfilesCommand:
         return {
             "Pixmap": os.path.join(ICONPATH, "warehouse_custom_profiles.svg"),
             "Accel": "Shift+C",  # a default shortcut (optional)
-            "MenuText": "Create Custom Profile",
-            "ToolTip": "Create new custom profiles from Edges",
+            "MenuText": "Создать пользовательский профиль",
+            "ToolTip": "Создать новый пользовательский профиль из рёбер",
         }
 
     def Activated(self):
