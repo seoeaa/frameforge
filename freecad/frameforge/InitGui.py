@@ -16,7 +16,7 @@ class FrameForge(Gui.Workbench):
     """
 
     MenuText = "FrameForge"
-    ToolTip = "Create Profiles, Miters, Cuts from Sketchs and Edges"
+    ToolTip = "Создание профилей, усов и подрезок из эскизов и рёбер"
     Icon = """
         /* XPM */
         static char * metalwb_xpm[] = {
@@ -228,23 +228,23 @@ class FrameForge(Gui.Workbench):
 
         App.Console.PrintMessage(translate("frameforge", "Switching to frameforge") + "\n")
 
-        self.appendToolbar(translate("frameforge", "Drawing Primitives"), self.toolbox_drawing)
-        self.appendMenu(translate("frameforge", "Drawing Primitives"), self.toolbox_drawing)
+        self.appendToolbar(translate("frameforge", "Базовые примитивы"), self.toolbox_drawing)
+        self.appendMenu(translate("frameforge", "Базовые примитивы"), self.toolbox_drawing)
 
         self.appendToolbar(translate("frameforge", "Frameforge"), self.toolbox_frameforge)
         self.appendMenu(translate("frameforge", "Frameforge"), self.toolbox_frameforge)
 
-        self.appendToolbar(translate("frameforge", "Profiles Group"), self.toolbox_group)
-        self.appendMenu(translate("frameforge", "Profiles Group"), self.toolbox_group)
+        self.appendToolbar(translate("frameforge", "Группа профилей"), self.toolbox_group)
+        self.appendMenu(translate("frameforge", "Группа профилей"), self.toolbox_group)
 
-        self.appendToolbar(translate("frameforge", "Part Primitives"), self.toolbox_part)
-        self.appendMenu(translate("frameforge", "Part Primitives"), self.toolbox_part)
+        self.appendToolbar(translate("frameforge", "Примитивы Part"), self.toolbox_part)
+        self.appendMenu(translate("frameforge", "Примитивы Part"), self.toolbox_part)
 
-        self.appendToolbar(translate("frameforge", "Frameforge output"), self.toolbox_output)
-        self.appendMenu(translate("frameforge", "Frameforge output"), self.toolbox_output)
+        self.appendToolbar(translate("frameforge", "Вывод Frameforge"), self.toolbox_output)
+        self.appendMenu(translate("frameforge", "Вывод Frameforge"), self.toolbox_output)
 
-        self.appendToolbar(translate("frameforge", "Frameforge utilities"), self.toolbox_utilities)
-        self.appendMenu(translate("frameforge", "Frameforge utilities"), self.toolbox_utilities)
+        self.appendToolbar(translate("frameforge", "Утилиты Frameforge"), self.toolbox_utilities)
+        self.appendMenu(translate("frameforge", "Утилиты Frameforge"), self.toolbox_utilities)
 
     def Activated(self):
         """
